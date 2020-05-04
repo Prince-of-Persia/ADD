@@ -1,0 +1,265 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 6
+Title "E-003-Main Container Stack"
+Date "2020-04-20"
+Rev "0"
+Comp ""
+Comment1 "Initial Design"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5E9DC30B
+P 5000 2700
+AR Path="/5E93AA9C/5E9DC30B" Ref="J?"  Part="1" 
+AR Path="/5E8A2CEF/5E9DC30B" Ref="J15"  Part="1" 
+F 0 "J15" H 5080 2742 50  0000 L CNN
+F 1 "Line Sensor" H 5080 2651 50  0000 L CNN
+F 2 "" H 5000 2700 50  0001 C CNN
+F 3 "~" H 5000 2700 50  0001 C CNN
+	1    5000 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9DC311
+P 4700 3000
+AR Path="/5E93AA9C/5E9DC311" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A2CEF/5E9DC311" Ref="#PWR066"  Part="1" 
+F 0 "#PWR066" H 4700 2750 50  0001 C CNN
+F 1 "GND" H 4705 2827 50  0000 C CNN
+F 2 "" H 4700 3000 50  0001 C CNN
+F 3 "" H 4700 3000 50  0001 C CNN
+	1    4700 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2800 4700 2800
+Wire Wire Line
+	4700 2800 4700 3000
+Wire Wire Line
+	4800 2700 4500 2700
+Text HLabel 4500 2700 0    50   Input ~ 0
+LineSens
+$Comp
+L power:+5V #PWR?
+U 1 1 5E9DC31B
+P 4700 2450
+AR Path="/5E93AA9C/5E9DC31B" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A2CEF/5E9DC31B" Ref="#PWR065"  Part="1" 
+F 0 "#PWR065" H 4700 2300 50  0001 C CNN
+F 1 "+5V" H 4715 2623 50  0000 C CNN
+F 2 "" H 4700 2450 50  0001 C CNN
+F 3 "" H 4700 2450 50  0001 C CNN
+	1    4700 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2450 4700 2600
+Wire Wire Line
+	4700 2600 4800 2600
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5E9DC323
+P 5000 4000
+AR Path="/5E93AA9C/5E9DC323" Ref="J?"  Part="1" 
+AR Path="/5E8A2CEF/5E9DC323" Ref="J16"  Part="1" 
+F 0 "J16" H 5080 4042 50  0000 L CNN
+F 1 "Servo1" H 5080 3951 50  0000 L CNN
+F 2 "" H 5000 4000 50  0001 C CNN
+F 3 "~" H 5000 4000 50  0001 C CNN
+	1    5000 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9DC329
+P 4700 4300
+AR Path="/5E93AA9C/5E9DC329" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A2CEF/5E9DC329" Ref="#PWR068"  Part="1" 
+F 0 "#PWR068" H 4700 4050 50  0001 C CNN
+F 1 "GND" H 4705 4127 50  0000 C CNN
+F 2 "" H 4700 4300 50  0001 C CNN
+F 3 "" H 4700 4300 50  0001 C CNN
+	1    4700 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 4100 4700 4100
+Wire Wire Line
+	4700 4100 4700 4300
+Wire Wire Line
+	4800 4000 4250 4000
+Text HLabel 4100 4000 0    50   Input ~ 0
+Servo1
+$Comp
+L power:+5V #PWR?
+U 1 1 5E9DC333
+P 4700 3750
+AR Path="/5E93AA9C/5E9DC333" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A2CEF/5E9DC333" Ref="#PWR067"  Part="1" 
+F 0 "#PWR067" H 4700 3600 50  0001 C CNN
+F 1 "+5V" H 4715 3923 50  0000 C CNN
+F 2 "" H 4700 3750 50  0001 C CNN
+F 3 "" H 4700 3750 50  0001 C CNN
+	1    4700 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3750 4700 3900
+Wire Wire Line
+	4700 3900 4800 3900
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5E9DC33B
+P 5000 5250
+AR Path="/5E93AA9C/5E9DC33B" Ref="J?"  Part="1" 
+AR Path="/5E8A2CEF/5E9DC33B" Ref="J17"  Part="1" 
+F 0 "J17" H 5080 5292 50  0000 L CNN
+F 1 "Servo2" H 5080 5201 50  0000 L CNN
+F 2 "" H 5000 5250 50  0001 C CNN
+F 3 "~" H 5000 5250 50  0001 C CNN
+	1    5000 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9DC341
+P 4700 5550
+AR Path="/5E93AA9C/5E9DC341" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A2CEF/5E9DC341" Ref="#PWR070"  Part="1" 
+F 0 "#PWR070" H 4700 5300 50  0001 C CNN
+F 1 "GND" H 4705 5377 50  0000 C CNN
+F 2 "" H 4700 5550 50  0001 C CNN
+F 3 "" H 4700 5550 50  0001 C CNN
+	1    4700 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 5350 4700 5350
+Wire Wire Line
+	4700 5350 4700 5550
+Wire Wire Line
+	4800 5250 4250 5250
+Text HLabel 4100 5250 0    50   Input ~ 0
+Servo2
+$Comp
+L power:+5V #PWR?
+U 1 1 5E9DC34B
+P 4700 5000
+AR Path="/5E93AA9C/5E9DC34B" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A2CEF/5E9DC34B" Ref="#PWR069"  Part="1" 
+F 0 "#PWR069" H 4700 4850 50  0001 C CNN
+F 1 "+5V" H 4715 5173 50  0000 C CNN
+F 2 "" H 4700 5000 50  0001 C CNN
+F 3 "" H 4700 5000 50  0001 C CNN
+	1    4700 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 5000 4700 5150
+Wire Wire Line
+	4700 5150 4800 5150
+$Comp
+L power:+5V #PWR?
+U 1 1 5E9DC353
+P 2700 1750
+AR Path="/5E93AA9C/5E9DC353" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A2CEF/5E9DC353" Ref="#PWR063"  Part="1" 
+F 0 "#PWR063" H 2700 1600 50  0001 C CNN
+F 1 "+5V" H 2715 1923 50  0000 C CNN
+F 2 "" H 2700 1750 50  0001 C CNN
+F 3 "" H 2700 1750 50  0001 C CNN
+	1    2700 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E9DC359
+P 2700 2000
+AR Path="/5E93AA9C/5E9DC359" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A2CEF/5E9DC359" Ref="#PWR064"  Part="1" 
+F 0 "#PWR064" H 2700 1750 50  0001 C CNN
+F 1 "GND" H 2705 1827 50  0000 C CNN
+F 2 "" H 2700 2000 50  0001 C CNN
+F 3 "" H 2700 2000 50  0001 C CNN
+	1    2700 2000
+	0    -1   -1   0   
+$EndComp
+Text HLabel 2450 1750 0    50   Input ~ 0
++5V
+Wire Wire Line
+	2450 1750 2700 1750
+Text HLabel 2450 2000 0    50   Input ~ 0
+GND
+Wire Wire Line
+	2450 2000 2700 2000
+$Comp
+L Device:C C1
+U 1 1 5EA0BA92
+P 4250 4250
+F 0 "C1" H 4365 4296 50  0000 L CNN
+F 1 "C" H 4365 4205 50  0000 L CNN
+F 2 "" H 4288 4100 50  0001 C CNN
+F 3 "~" H 4250 4250 50  0001 C CNN
+	1    4250 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 4100 4250 4000
+Connection ~ 4250 4000
+Wire Wire Line
+	4250 4000 4100 4000
+$Comp
+L power:GND #PWR?
+U 1 1 5EA0C566
+P 4250 4500
+AR Path="/5E93AA9C/5EA0C566" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A2CEF/5EA0C566" Ref="#PWR073"  Part="1" 
+F 0 "#PWR073" H 4250 4250 50  0001 C CNN
+F 1 "GND" H 4255 4327 50  0000 C CNN
+F 2 "" H 4250 4500 50  0001 C CNN
+F 3 "" H 4250 4500 50  0001 C CNN
+	1    4250 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 4500 4250 4400
+$Comp
+L Device:C C2
+U 1 1 5EA0D6A0
+P 4250 5500
+F 0 "C2" H 4365 5546 50  0000 L CNN
+F 1 "C" H 4365 5455 50  0000 L CNN
+F 2 "" H 4288 5350 50  0001 C CNN
+F 3 "~" H 4250 5500 50  0001 C CNN
+	1    4250 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 5350 4250 5250
+$Comp
+L power:GND #PWR?
+U 1 1 5EA0D6A7
+P 4250 5750
+AR Path="/5E93AA9C/5EA0D6A7" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A2CEF/5EA0D6A7" Ref="#PWR074"  Part="1" 
+F 0 "#PWR074" H 4250 5500 50  0001 C CNN
+F 1 "GND" H 4255 5577 50  0000 C CNN
+F 2 "" H 4250 5750 50  0001 C CNN
+F 3 "" H 4250 5750 50  0001 C CNN
+	1    4250 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 5750 4250 5650
+Connection ~ 4250 5250
+Wire Wire Line
+	4250 5250 4100 5250
+$EndSCHEMATC

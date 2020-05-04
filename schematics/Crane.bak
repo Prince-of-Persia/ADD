@@ -1,0 +1,512 @@
+EESchema Schematic File Version 4
+LIBS:CrazyMachine-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 6
+Title "E-002-Crane"
+Date "2020-04-06"
+Rev "0"
+Comp ""
+Comment1 "Initial Design"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x06 J?
+U 1 1 5E94F7CA
+P 1850 2400
+AR Path="/5E93AA9C/5E94F7CA" Ref="J?"  Part="1" 
+AR Path="/5E8A288E/5E94F7CA" Ref="J6"  Part="1" 
+F 0 "J6" H 1930 2392 50  0000 L CNN
+F 1 "28BYJ-48 Stepper Motor" H 1930 2301 50  0000 L CNN
+F 2 "" H 1850 2400 50  0001 C CNN
+F 3 "~" H 1850 2400 50  0001 C CNN
+	1    1850 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E94F7D0
+P 1550 2900
+AR Path="/5E93AA9C/5E94F7D0" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A288E/5E94F7D0" Ref="#PWR027"  Part="1" 
+F 0 "#PWR027" H 1550 2650 50  0001 C CNN
+F 1 "GND" H 1555 2727 50  0000 C CNN
+F 2 "" H 1550 2900 50  0001 C CNN
+F 3 "" H 1550 2900 50  0001 C CNN
+	1    1550 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 2900 1550 2700
+Wire Wire Line
+	1550 2700 1650 2700
+Wire Wire Line
+	1650 2200 1350 2200
+Wire Wire Line
+	1650 2300 1350 2300
+Wire Wire Line
+	1650 2400 1350 2400
+Wire Wire Line
+	1650 2500 1350 2500
+Wire Wire Line
+	1650 2600 1550 2600
+Wire Wire Line
+	1550 2600 1550 2050
+$Comp
+L power:+5V #PWR?
+U 1 1 5E94F7DE
+P 1550 2050
+AR Path="/5E93AA9C/5E94F7DE" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A288E/5E94F7DE" Ref="#PWR026"  Part="1" 
+F 0 "#PWR026" H 1550 1900 50  0001 C CNN
+F 1 "+5V" H 1565 2223 50  0000 C CNN
+F 2 "" H 1550 2050 50  0001 C CNN
+F 3 "" H 1550 2050 50  0001 C CNN
+	1    1550 2050
+	1    0    0    -1  
+$EndComp
+Text HLabel 1350 2200 0    50   Input ~ 0
+SMinit1
+Text HLabel 1350 2300 0    50   Input ~ 0
+SMinit2
+Text HLabel 1350 2400 0    50   Input ~ 0
+SMinit3
+Text HLabel 1350 2500 0    50   Input ~ 0
+SMinit4
+Text Notes 1800 2100 0    50   ~ 0
+Note 1
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5E950A63
+P 3700 2450
+AR Path="/5E93AA9C/5E950A63" Ref="J?"  Part="1" 
+AR Path="/5E8A288E/5E950A63" Ref="J7"  Part="1" 
+F 0 "J7" H 3780 2492 50  0000 L CNN
+F 1 "Force Sensing Resistor" H 3780 2401 50  0000 L CNN
+F 2 "" H 3700 2450 50  0001 C CNN
+F 3 "~" H 3700 2450 50  0001 C CNN
+	1    3700 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E950A69
+P 3400 2750
+AR Path="/5E93AA9C/5E950A69" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A288E/5E950A69" Ref="#PWR031"  Part="1" 
+F 0 "#PWR031" H 3400 2500 50  0001 C CNN
+F 1 "GND" H 3405 2577 50  0000 C CNN
+F 2 "" H 3400 2750 50  0001 C CNN
+F 3 "" H 3400 2750 50  0001 C CNN
+	1    3400 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2550 3400 2550
+Wire Wire Line
+	3400 2550 3400 2750
+Wire Wire Line
+	3500 2450 3200 2450
+Text HLabel 3200 2450 0    50   Input ~ 0
+FSR
+$Comp
+L power:+5V #PWR?
+U 1 1 5E950A73
+P 3400 2200
+AR Path="/5E93AA9C/5E950A73" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A288E/5E950A73" Ref="#PWR030"  Part="1" 
+F 0 "#PWR030" H 3400 2050 50  0001 C CNN
+F 1 "+5V" H 3415 2373 50  0000 C CNN
+F 2 "" H 3400 2200 50  0001 C CNN
+F 3 "" H 3400 2200 50  0001 C CNN
+	1    3400 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2200 3400 2350
+Wire Wire Line
+	3400 2350 3500 2350
+$Comp
+L power:+5V #PWR020
+U 1 1 5E950BDC
+P 1500 3700
+F 0 "#PWR020" H 1500 3550 50  0001 C CNN
+F 1 "+5V" H 1515 3873 50  0000 C CNN
+F 2 "" H 1500 3700 50  0001 C CNN
+F 3 "" H 1500 3700 50  0001 C CNN
+	1    1500 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5E950F6E
+P 1500 4050
+F 0 "R1" H 1570 4096 50  0000 L CNN
+F 1 "10k" H 1570 4005 50  0000 L CNN
+F 2 "" V 1430 4050 50  0001 C CNN
+F 3 "~" H 1500 4050 50  0001 C CNN
+	1    1500 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5E955FB3
+P 1500 4750
+F 0 "SW1" V 1454 4898 50  0000 L CNN
+F 1 "Limit Switch" V 1545 4898 50  0000 L CNN
+F 2 "" H 1500 4950 50  0001 C CNN
+F 3 "~" H 1500 4950 50  0001 C CNN
+	1    1500 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5E956726
+P 1500 5100
+F 0 "#PWR021" H 1500 4850 50  0001 C CNN
+F 1 "GND" H 1505 4927 50  0000 C CNN
+F 2 "" H 1500 5100 50  0001 C CNN
+F 3 "" H 1500 5100 50  0001 C CNN
+	1    1500 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 3700 1500 3900
+Wire Wire Line
+	1500 4200 1500 4400
+Wire Wire Line
+	1500 4950 1500 5100
+Connection ~ 1500 4400
+Wire Wire Line
+	1500 4400 1500 4550
+Wire Wire Line
+	1500 4400 1800 4400
+Text HLabel 1800 4400 2    50   Input ~ 0
+LimitSwitch1
+$Comp
+L power:+5V #PWR028
+U 1 1 5E959446
+P 2850 3700
+F 0 "#PWR028" H 2850 3550 50  0001 C CNN
+F 1 "+5V" H 2865 3873 50  0000 C CNN
+F 2 "" H 2850 3700 50  0001 C CNN
+F 3 "" H 2850 3700 50  0001 C CNN
+	1    2850 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E95944C
+P 2850 4050
+F 0 "R2" H 2920 4096 50  0000 L CNN
+F 1 "10k" H 2920 4005 50  0000 L CNN
+F 2 "" V 2780 4050 50  0001 C CNN
+F 3 "~" H 2850 4050 50  0001 C CNN
+	1    2850 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW2
+U 1 1 5E959452
+P 2850 4750
+F 0 "SW2" V 2804 4898 50  0000 L CNN
+F 1 "Limit Switch" V 2895 4898 50  0000 L CNN
+F 2 "" H 2850 4950 50  0001 C CNN
+F 3 "~" H 2850 4950 50  0001 C CNN
+	1    2850 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR029
+U 1 1 5E959458
+P 2850 5100
+F 0 "#PWR029" H 2850 4850 50  0001 C CNN
+F 1 "GND" H 2855 4927 50  0000 C CNN
+F 2 "" H 2850 5100 50  0001 C CNN
+F 3 "" H 2850 5100 50  0001 C CNN
+	1    2850 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 3700 2850 3900
+Wire Wire Line
+	2850 4200 2850 4400
+Wire Wire Line
+	2850 4950 2850 5100
+Connection ~ 2850 4400
+Wire Wire Line
+	2850 4400 2850 4550
+Wire Wire Line
+	2850 4400 3150 4400
+Text HLabel 3150 4400 2    50   Input ~ 0
+LimitSwitch2
+$Comp
+L power:+5V #PWR032
+U 1 1 5E95A2A3
+P 4050 3700
+F 0 "#PWR032" H 4050 3550 50  0001 C CNN
+F 1 "+5V" H 4065 3873 50  0000 C CNN
+F 2 "" H 4050 3700 50  0001 C CNN
+F 3 "" H 4050 3700 50  0001 C CNN
+	1    4050 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E95A2A9
+P 4050 4050
+F 0 "R3" H 4120 4096 50  0000 L CNN
+F 1 "10k" H 4120 4005 50  0000 L CNN
+F 2 "" V 3980 4050 50  0001 C CNN
+F 3 "~" H 4050 4050 50  0001 C CNN
+	1    4050 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW3
+U 1 1 5E95A2AF
+P 4050 4750
+F 0 "SW3" V 4004 4898 50  0000 L CNN
+F 1 "Limit Switch" V 4095 4898 50  0000 L CNN
+F 2 "" H 4050 4950 50  0001 C CNN
+F 3 "~" H 4050 4950 50  0001 C CNN
+	1    4050 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR033
+U 1 1 5E95A2B5
+P 4050 5100
+F 0 "#PWR033" H 4050 4850 50  0001 C CNN
+F 1 "GND" H 4055 4927 50  0000 C CNN
+F 2 "" H 4050 5100 50  0001 C CNN
+F 3 "" H 4050 5100 50  0001 C CNN
+	1    4050 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 3700 4050 3900
+Wire Wire Line
+	4050 4200 4050 4400
+Wire Wire Line
+	4050 4950 4050 5100
+Connection ~ 4050 4400
+Wire Wire Line
+	4050 4400 4050 4550
+Wire Wire Line
+	4050 4400 4350 4400
+Text HLabel 4350 4400 2    50   Input ~ 0
+LimitSwitch3
+$Comp
+L power:+5V #PWR?
+U 1 1 5E95C848
+P 1550 900
+AR Path="/5E93AA9C/5E95C848" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A288E/5E95C848" Ref="#PWR023"  Part="1" 
+F 0 "#PWR023" H 1550 750 50  0001 C CNN
+F 1 "+5V" V 1550 1100 50  0000 C CNN
+F 2 "" H 1550 900 50  0001 C CNN
+F 3 "" H 1550 900 50  0001 C CNN
+	1    1550 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E95C84E
+P 1550 1300
+AR Path="/5E93AA9C/5E95C84E" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A288E/5E95C84E" Ref="#PWR025"  Part="1" 
+F 0 "#PWR025" H 1550 1050 50  0001 C CNN
+F 1 "GND" V 1550 1100 50  0000 C CNN
+F 2 "" H 1550 1300 50  0001 C CNN
+F 3 "" H 1550 1300 50  0001 C CNN
+	1    1550 1300
+	0    -1   -1   0   
+$EndComp
+Text HLabel 1300 900  0    50   Input ~ 0
++5V
+Wire Wire Line
+	1300 900  1550 900 
+Text HLabel 1300 1300 0    50   Input ~ 0
+GND
+Wire Wire Line
+	1300 1300 1550 1300
+Text Notes 9050 1800 0    50   ~ 0
+Genaral Notes:\n1. 28BYJ-48 is a stepper driver and \nrequires no further circuitory\n\n2. The resistor value of the resistor in series with\nthe limit switch must be varified based on the \nrelevant datasheet\n\n3. L289P DC Driver shield capable of driving two \nDC motors. Motor A is used for the crane and \nmotor B is used for the truck, refer to E-004\n\n4. Confirm final connections based on the model\nand data sheet
+Text Notes 1400 4200 1    50   ~ 0
+Note 2
+Text Notes 2750 4200 1    50   ~ 0
+Note 2
+Text Notes 3950 4200 1    50   ~ 0
+Note 2
+$Comp
+L power:+12V #PWR022
+U 1 1 5E95D8F8
+P 1550 700
+F 0 "#PWR022" H 1550 550 50  0001 C CNN
+F 1 "+12V" V 1565 828 50  0000 L CNN
+F 2 "" H 1550 700 50  0001 C CNN
+F 3 "" H 1550 700 50  0001 C CNN
+	1    1550 700 
+	0    1    1    0   
+$EndComp
+Text HLabel 1300 700  0    50   Input ~ 0
++12V
+Wire Wire Line
+	1300 700  1550 700 
+$Comp
+L Connector_Generic:Conn_01x06 J9
+U 1 1 5E95F12A
+P 9350 2950
+F 0 "J9" H 9430 2942 50  0000 L CNN
+F 1 "DC-Motor Encoder" H 9430 2851 50  0000 L CNN
+F 2 "" H 9350 2950 50  0001 C CNN
+F 3 "~" H 9350 2950 50  0001 C CNN
+	1    9350 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_Motor:L298P U2
+U 1 1 5E963523
+P 7100 2950
+F 0 "U2" H 7100 3000 50  0000 C CNN
+F 1 "L298P" H 7100 2900 50  0000 C CNN
+F 2 "" H 7250 3200 50  0001 C CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000240.pdf" H 7250 3200 50  0001 C CNN
+	1    7100 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 2250 7100 2000
+$Comp
+L power:+12V #PWR034
+U 1 1 5E977D9C
+P 7100 2000
+F 0 "#PWR034" H 7100 1850 50  0001 C CNN
+F 1 "+12V" H 7115 2173 50  0000 C CNN
+F 2 "" H 7100 2000 50  0001 C CNN
+F 3 "" H 7100 2000 50  0001 C CNN
+	1    7100 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 3650 7100 3850
+$Comp
+L power:GND #PWR035
+U 1 1 5E97889A
+P 7100 3850
+F 0 "#PWR035" H 7100 3600 50  0001 C CNN
+F 1 "GND" H 7105 3677 50  0000 C CNN
+F 2 "" H 7100 3850 50  0001 C CNN
+F 3 "" H 7100 3850 50  0001 C CNN
+	1    7100 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR038
+U 1 1 5E979413
+P 8900 3700
+F 0 "#PWR038" H 8900 3450 50  0001 C CNN
+F 1 "GND" H 8905 3527 50  0000 C CNN
+F 2 "" H 8900 3700 50  0001 C CNN
+F 3 "" H 8900 3700 50  0001 C CNN
+	1    8900 3700
+	1    0    0    -1  
+$EndComp
+Text HLabel 1300 1100 0    50   Input ~ 0
++3.3V
+Wire Wire Line
+	1300 1100 1550 1100
+$Comp
+L power:+3.3V #PWR024
+U 1 1 5E97BEB0
+P 1550 1100
+F 0 "#PWR024" H 1550 950 50  0001 C CNN
+F 1 "+3.3V" V 1565 1228 50  0000 L CNN
+F 2 "" H 1550 1100 50  0001 C CNN
+F 3 "" H 1550 1100 50  0001 C CNN
+	1    1550 1100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9150 2950 8900 2950
+Wire Wire Line
+	8900 2950 8900 2500
+$Comp
+L power:+3.3V #PWR037
+U 1 1 5E97D7CC
+P 8900 2500
+F 0 "#PWR037" H 8900 2350 50  0001 C CNN
+F 1 "+3.3V" H 8915 2673 50  0000 C CNN
+F 2 "" H 8900 2500 50  0001 C CNN
+F 3 "" H 8900 2500 50  0001 C CNN
+	1    8900 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 3250 8900 3250
+Wire Wire Line
+	8900 3250 8900 3700
+Wire Wire Line
+	9150 3050 8900 3050
+Text HLabel 8900 3050 0    50   Input ~ 0
+Decoder_Arduino_Pin1
+Wire Wire Line
+	7700 2750 9150 2750
+Wire Wire Line
+	7700 2850 9150 2850
+Wire Wire Line
+	9150 3150 8900 3150
+Text HLabel 8900 3150 0    50   Input ~ 0
+Decoder_Arduino_Pin2
+Text HLabel 6200 2450 0    50   Input ~ 0
+L298P_IN1
+Text HLabel 6200 2550 0    50   Input ~ 0
+L298P_IN2
+Text HLabel 6200 2650 0    50   Input ~ 0
+L298P_EnA
+Wire Wire Line
+	6500 2450 6200 2450
+Wire Wire Line
+	6200 2550 6500 2550
+Wire Wire Line
+	6500 2650 6200 2650
+Text Notes 6600 2250 0    50   ~ 0
+Note 3, 4
+Text Notes 9450 3200 0    50   ~ 0
+Note 4
+$Comp
+L Connector_Generic:Conn_01x02 J8
+U 1 1 5E988735
+P 8100 4750
+F 0 "J8" H 8180 4742 50  0000 L CNN
+F 1 "Electromagnet" H 8180 4651 50  0000 L CNN
+F 2 "" H 8100 4750 50  0001 C CNN
+F 3 "~" H 8100 4750 50  0001 C CNN
+	1    8100 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR036
+U 1 1 5E988F66
+P 7700 5000
+F 0 "#PWR036" H 7700 4750 50  0001 C CNN
+F 1 "GND" H 7705 4827 50  0000 C CNN
+F 2 "" H 7700 5000 50  0001 C CNN
+F 3 "" H 7700 5000 50  0001 C CNN
+	1    7700 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 4850 7700 4850
+Wire Wire Line
+	7700 4850 7700 5000
+Text HLabel 7700 4750 0    50   Input ~ 0
+Electromagnet
+Wire Wire Line
+	7700 4750 7900 4750
+$EndSCHEMATC

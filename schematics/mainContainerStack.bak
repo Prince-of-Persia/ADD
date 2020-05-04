@@ -1,0 +1,17 @@
+EESchema Schematic File Version 4
+LIBS:CrazyMachine-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 6
+Title "E-003-Main Container Stack"
+Date "2020-04-06"
+Rev "0"
+Comp ""
+Comment1 "Initial Design"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$EndSCHEMATC

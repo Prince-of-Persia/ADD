@@ -1,0 +1,248 @@
+EESchema Schematic File Version 4
+LIBS:CrazyMachine-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 6
+Title "E-005-Ship 2"
+Date "2020-04-06"
+Rev "0"
+Comp ""
+Comment1 "Initial Design"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5E8EFF63
+P 7450 2350
+AR Path="/5E93AA9C/5E8EFF63" Ref="J?"  Part="1" 
+AR Path="/5E8A342F/5E8EFF63" Ref="J?"  Part="1" 
+F 0 "J?" H 7530 2392 50  0000 L CNN
+F 1 "Line Sensor 1" H 7530 2301 50  0000 L CNN
+F 2 "" H 7450 2350 50  0001 C CNN
+F 3 "~" H 7450 2350 50  0001 C CNN
+	1    7450 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E8EFF69
+P 7150 2650
+AR Path="/5E93AA9C/5E8EFF69" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A342F/5E8EFF69" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7150 2400 50  0001 C CNN
+F 1 "GND" H 7155 2477 50  0000 C CNN
+F 2 "" H 7150 2650 50  0001 C CNN
+F 3 "" H 7150 2650 50  0001 C CNN
+	1    7150 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 2450 7150 2450
+Wire Wire Line
+	7150 2450 7150 2650
+Wire Wire Line
+	7250 2350 6950 2350
+Text HLabel 6950 2350 0    50   Input ~ 0
+LineSens1
+$Comp
+L power:+5V #PWR?
+U 1 1 5E8EFF73
+P 7150 2100
+AR Path="/5E93AA9C/5E8EFF73" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A342F/5E8EFF73" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7150 1950 50  0001 C CNN
+F 1 "+5V" H 7165 2273 50  0000 C CNN
+F 2 "" H 7150 2100 50  0001 C CNN
+F 3 "" H 7150 2100 50  0001 C CNN
+	1    7150 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 2100 7150 2250
+Wire Wire Line
+	7150 2250 7250 2250
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5E8F029E
+P 7450 3450
+AR Path="/5E93AA9C/5E8F029E" Ref="J?"  Part="1" 
+AR Path="/5E8A342F/5E8F029E" Ref="J?"  Part="1" 
+F 0 "J?" H 7530 3492 50  0000 L CNN
+F 1 "Line Sensor 2" H 7530 3401 50  0000 L CNN
+F 2 "" H 7450 3450 50  0001 C CNN
+F 3 "~" H 7450 3450 50  0001 C CNN
+	1    7450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E8F02A4
+P 7150 3750
+AR Path="/5E93AA9C/5E8F02A4" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A342F/5E8F02A4" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7150 3500 50  0001 C CNN
+F 1 "GND" H 7155 3577 50  0000 C CNN
+F 2 "" H 7150 3750 50  0001 C CNN
+F 3 "" H 7150 3750 50  0001 C CNN
+	1    7150 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 3550 7150 3550
+Wire Wire Line
+	7150 3550 7150 3750
+Wire Wire Line
+	7250 3450 6950 3450
+Text HLabel 6950 3450 0    50   Input ~ 0
+LineSens2
+$Comp
+L power:+5V #PWR?
+U 1 1 5E8F02AE
+P 7150 3200
+AR Path="/5E93AA9C/5E8F02AE" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A342F/5E8F02AE" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7150 3050 50  0001 C CNN
+F 1 "+5V" H 7165 3373 50  0000 C CNN
+F 2 "" H 7150 3200 50  0001 C CNN
+F 3 "" H 7150 3200 50  0001 C CNN
+	1    7150 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 3200 7150 3350
+Wire Wire Line
+	7150 3350 7250 3350
+$Comp
+L Driver_Motor:L298P U?
+U 1 1 5E8F873B
+P 4000 2950
+AR Path="/5E8A288E/5E8F873B" Ref="U?"  Part="1" 
+AR Path="/5E8A3142/5E8F873B" Ref="U?"  Part="1" 
+AR Path="/5E8A342F/5E8F873B" Ref="U?"  Part="1" 
+F 0 "U?" H 4000 3000 50  0000 C CNN
+F 1 "L298P" H 4000 2900 50  0000 C CNN
+F 2 "" H 4150 3200 50  0001 C CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000240.pdf" H 4150 3200 50  0001 C CNN
+	1    4000 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2250 4000 2000
+$Comp
+L power:+12V #PWR?
+U 1 1 5E8F8742
+P 4000 2000
+AR Path="/5E8A288E/5E8F8742" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A3142/5E8F8742" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A342F/5E8F8742" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4000 1850 50  0001 C CNN
+F 1 "+12V" H 4015 2173 50  0000 C CNN
+F 2 "" H 4000 2000 50  0001 C CNN
+F 3 "" H 4000 2000 50  0001 C CNN
+	1    4000 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 3650 4000 3850
+$Comp
+L power:GND #PWR?
+U 1 1 5E8F8749
+P 4000 3850
+AR Path="/5E8A288E/5E8F8749" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A3142/5E8F8749" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A342F/5E8F8749" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4000 3600 50  0001 C CNN
+F 1 "GND" H 4005 3677 50  0000 C CNN
+F 2 "" H 4000 3850 50  0001 C CNN
+F 3 "" H 4000 3850 50  0001 C CNN
+	1    4000 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2750 4900 2750
+Wire Wire Line
+	4600 2850 4900 2850
+Text HLabel 3100 2450 0    50   Input ~ 0
+L298P_IN1
+Text HLabel 3100 2550 0    50   Input ~ 0
+L298P_IN2
+Text HLabel 3100 2650 0    50   Input ~ 0
+L298P_EnA
+Wire Wire Line
+	3400 2450 3100 2450
+Wire Wire Line
+	3100 2550 3400 2550
+Wire Wire Line
+	3400 2650 3100 2650
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5E8F8758
+P 5100 2750
+AR Path="/5E8A3142/5E8F8758" Ref="J?"  Part="1" 
+AR Path="/5E8A342F/5E8F8758" Ref="J?"  Part="1" 
+F 0 "J?" H 5180 2742 50  0000 L CNN
+F 1 "DC Motor" H 5180 2651 50  0000 L CNN
+F 2 "" H 5100 2750 50  0001 C CNN
+F 3 "~" H 5100 2750 50  0001 C CNN
+	1    5100 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E8F875E
+P 1650 1400
+AR Path="/5E93AA9C/5E8F875E" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A288E/5E8F875E" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A3142/5E8F875E" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A342F/5E8F875E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1650 1150 50  0001 C CNN
+F 1 "GND" V 1650 1200 50  0000 C CNN
+F 2 "" H 1650 1400 50  0001 C CNN
+F 3 "" H 1650 1400 50  0001 C CNN
+	1    1650 1400
+	0    -1   -1   0   
+$EndComp
+Text HLabel 1400 1400 0    50   Input ~ 0
+GND
+Wire Wire Line
+	1400 1400 1650 1400
+$Comp
+L power:+12V #PWR?
+U 1 1 5E8F8766
+P 1650 1000
+AR Path="/5E8A288E/5E8F8766" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A3142/5E8F8766" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A342F/5E8F8766" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1650 850 50  0001 C CNN
+F 1 "+12V" V 1665 1128 50  0000 L CNN
+F 2 "" H 1650 1000 50  0001 C CNN
+F 3 "" H 1650 1000 50  0001 C CNN
+	1    1650 1000
+	0    1    1    0   
+$EndComp
+Text HLabel 1400 1000 0    50   Input ~ 0
++12V
+Wire Wire Line
+	1400 1000 1650 1000
+$Comp
+L power:+5V #PWR?
+U 1 1 5E8F876E
+P 1650 1200
+AR Path="/5E93AA9C/5E8F876E" Ref="#PWR?"  Part="1" 
+AR Path="/5E8A342F/5E8F876E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1650 1050 50  0001 C CNN
+F 1 "+5V" V 1650 1400 50  0000 C CNN
+F 2 "" H 1650 1200 50  0001 C CNN
+F 3 "" H 1650 1200 50  0001 C CNN
+	1    1650 1200
+	0    1    1    0   
+$EndComp
+Text HLabel 1400 1200 0    50   Input ~ 0
++5V
+Wire Wire Line
+	1400 1200 1650 1200
+$EndSCHEMATC

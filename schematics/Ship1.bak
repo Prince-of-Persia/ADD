@@ -1,0 +1,275 @@
+EESchema Schematic File Version 4
+LIBS:CrazyMachine-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 6
+Title "E-001-Ship 1"
+Date "2020-04-06"
+Rev "0"
+Comp ""
+Comment1 "Initial Design"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 5E93C9EC
+P 4000 2500
+F 0 "J1" H 4080 2542 50  0000 L CNN
+F 1 "Line Sensor" H 4080 2451 50  0000 L CNN
+F 2 "" H 4000 2500 50  0001 C CNN
+F 3 "~" H 4000 2500 50  0001 C CNN
+	1    4000 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5E93D3AD
+P 7850 2400
+F 0 "J5" H 7930 2392 50  0000 L CNN
+F 1 "Piezo" H 7930 2301 50  0000 L CNN
+F 2 "" H 7850 2400 50  0001 C CNN
+F 3 "~" H 7850 2400 50  0001 C CNN
+	1    7850 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J4
+U 1 1 5E93EAAA
+P 5800 2600
+F 0 "J4" H 5880 2592 50  0000 L CNN
+F 1 "28BYJ-48 Stepper Motor" H 5880 2501 50  0000 L CNN
+F 2 "" H 5800 2600 50  0001 C CNN
+F 3 "~" H 5800 2600 50  0001 C CNN
+	1    5800 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 5E9411F8
+P 3700 2800
+F 0 "#PWR012" H 3700 2550 50  0001 C CNN
+F 1 "GND" H 3705 2627 50  0000 C CNN
+F 2 "" H 3700 2800 50  0001 C CNN
+F 3 "" H 3700 2800 50  0001 C CNN
+	1    3700 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2600 3700 2600
+Wire Wire Line
+	3700 2600 3700 2800
+Wire Wire Line
+	3800 2500 3500 2500
+Text HLabel 3500 2500 0    50   Input ~ 0
+LineSens
+$Comp
+L power:+5V #PWR011
+U 1 1 5E943B87
+P 3700 2250
+F 0 "#PWR011" H 3700 2100 50  0001 C CNN
+F 1 "+5V" H 3715 2423 50  0000 C CNN
+F 2 "" H 3700 2250 50  0001 C CNN
+F 3 "" H 3700 2250 50  0001 C CNN
+	1    3700 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 2250 3700 2400
+Wire Wire Line
+	3700 2400 3800 2400
+$Comp
+L power:GND #PWR018
+U 1 1 5E944657
+P 5500 3100
+F 0 "#PWR018" H 5500 2850 50  0001 C CNN
+F 1 "GND" H 5505 2927 50  0000 C CNN
+F 2 "" H 5500 3100 50  0001 C CNN
+F 3 "" H 5500 3100 50  0001 C CNN
+	1    5500 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 3100 5500 2900
+Wire Wire Line
+	5500 2900 5600 2900
+Wire Wire Line
+	5600 2400 5300 2400
+Wire Wire Line
+	5600 2500 5300 2500
+Wire Wire Line
+	5600 2600 5300 2600
+Wire Wire Line
+	5600 2700 5300 2700
+Wire Wire Line
+	5600 2800 5500 2800
+Wire Wire Line
+	5500 2800 5500 2250
+$Comp
+L power:+5V #PWR017
+U 1 1 5E9473DD
+P 5500 2250
+F 0 "#PWR017" H 5500 2100 50  0001 C CNN
+F 1 "+5V" H 5515 2423 50  0000 C CNN
+F 2 "" H 5500 2250 50  0001 C CNN
+F 3 "" H 5500 2250 50  0001 C CNN
+	1    5500 2250
+	1    0    0    -1  
+$EndComp
+Text HLabel 5300 2400 0    50   Input ~ 0
+SMinit1
+Text HLabel 5300 2500 0    50   Input ~ 0
+SMinit2
+Text HLabel 5300 2600 0    50   Input ~ 0
+SMinit3
+Text HLabel 5300 2700 0    50   Input ~ 0
+SMinit4
+$Comp
+L power:GND #PWR019
+U 1 1 5E947919
+P 7550 2700
+F 0 "#PWR019" H 7550 2450 50  0001 C CNN
+F 1 "GND" H 7555 2527 50  0000 C CNN
+F 2 "" H 7550 2700 50  0001 C CNN
+F 3 "" H 7550 2700 50  0001 C CNN
+	1    7550 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 2700 7550 2500
+Wire Wire Line
+	7550 2500 7650 2500
+Wire Wire Line
+	7650 2400 7350 2400
+Text HLabel 7350 2400 0    50   Input ~ 0
+Piezo
+Text Notes 9400 1150 0    50   ~ 0
+Genaral Notes:\n1. Piezo buzzer is used in multiple steps.\n(It is shared between the two ships)\n\n2. 28BYJ-48 is a stepper driver and \nrequires no further circuitory
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 5E8A5F22
+P 4000 3800
+F 0 "J2" H 4080 3842 50  0000 L CNN
+F 1 "Pressure Sensor" H 4080 3751 50  0000 L CNN
+F 2 "" H 4000 3800 50  0001 C CNN
+F 3 "~" H 4000 3800 50  0001 C CNN
+	1    4000 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR014
+U 1 1 5E8A5F28
+P 3700 4100
+F 0 "#PWR014" H 3700 3850 50  0001 C CNN
+F 1 "GND" H 3705 3927 50  0000 C CNN
+F 2 "" H 3700 4100 50  0001 C CNN
+F 3 "" H 3700 4100 50  0001 C CNN
+	1    3700 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3900 3700 3900
+Wire Wire Line
+	3700 3900 3700 4100
+Wire Wire Line
+	3800 3800 3500 3800
+Text HLabel 3500 3800 0    50   Input ~ 0
+PressureSens
+$Comp
+L power:+5V #PWR013
+U 1 1 5E8A5F32
+P 3700 3550
+F 0 "#PWR013" H 3700 3400 50  0001 C CNN
+F 1 "+5V" H 3715 3723 50  0000 C CNN
+F 2 "" H 3700 3550 50  0001 C CNN
+F 3 "" H 3700 3550 50  0001 C CNN
+	1    3700 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 3550 3700 3700
+Wire Wire Line
+	3700 3700 3800 3700
+$Comp
+L Connector_Generic:Conn_01x03 J3
+U 1 1 5E8A66B9
+P 4000 5050
+F 0 "J3" H 4080 5092 50  0000 L CNN
+F 1 "Force Sensing Resistor" H 4080 5001 50  0000 L CNN
+F 2 "" H 4000 5050 50  0001 C CNN
+F 3 "~" H 4000 5050 50  0001 C CNN
+	1    4000 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 5E8A66BF
+P 3700 5350
+F 0 "#PWR016" H 3700 5100 50  0001 C CNN
+F 1 "GND" H 3705 5177 50  0000 C CNN
+F 2 "" H 3700 5350 50  0001 C CNN
+F 3 "" H 3700 5350 50  0001 C CNN
+	1    3700 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 5150 3700 5150
+Wire Wire Line
+	3700 5150 3700 5350
+Wire Wire Line
+	3800 5050 3500 5050
+Text HLabel 3500 5050 0    50   Input ~ 0
+FSR
+$Comp
+L power:+5V #PWR015
+U 1 1 5E8A66C9
+P 3700 4800
+F 0 "#PWR015" H 3700 4650 50  0001 C CNN
+F 1 "+5V" H 3715 4973 50  0000 C CNN
+F 2 "" H 3700 4800 50  0001 C CNN
+F 3 "" H 3700 4800 50  0001 C CNN
+	1    3700 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4800 3700 4950
+Wire Wire Line
+	3700 4950 3800 4950
+$Comp
+L power:+5V #PWR09
+U 1 1 5E8C3057
+P 1700 1550
+F 0 "#PWR09" H 1700 1400 50  0001 C CNN
+F 1 "+5V" H 1715 1723 50  0000 C CNN
+F 2 "" H 1700 1550 50  0001 C CNN
+F 3 "" H 1700 1550 50  0001 C CNN
+	1    1700 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5E8C3401
+P 1700 1800
+F 0 "#PWR010" H 1700 1550 50  0001 C CNN
+F 1 "GND" H 1705 1627 50  0000 C CNN
+F 2 "" H 1700 1800 50  0001 C CNN
+F 3 "" H 1700 1800 50  0001 C CNN
+	1    1700 1800
+	0    -1   -1   0   
+$EndComp
+Text HLabel 1450 1550 0    50   Input ~ 0
++5V
+Wire Wire Line
+	1450 1550 1700 1550
+Text HLabel 1450 1800 0    50   Input ~ 0
+GND
+Wire Wire Line
+	1450 1800 1700 1800
+Text Notes 5750 2300 0    50   ~ 0
+Note 2
+Text Notes 7800 2300 0    50   ~ 0
+Note 1
+$EndSCHEMATC
