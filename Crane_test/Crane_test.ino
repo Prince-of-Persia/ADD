@@ -2,10 +2,15 @@
 void setup() 
 {
   Serial.begin(9600);
-  pinMode(4,OUTPUT);   /* define  pin (4,5,6,7) out*/
-  pinMode(5,OUTPUT);
-  pinMode(6,OUTPUT);
-  pinMode(7,OUTPUT);
+  
+  pinMode(12, INPUT_PULLUP);
+  pinMode(13, INPUT_PULLUP);
+  //pinMode(0, INPUT_PULLUP);
+
+  pinMode(4, OUTPUT);   /* define  pin (4,5,6,7) out*/
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
 }
 
 void motor_c(char motor_n,char direction_m,int speed_m ) /* motor_n: the motor number to drive(0 stands for M1;1 stands for M2)*/
@@ -23,28 +28,55 @@ void motor_c(char motor_n,char direction_m,int speed_m ) /* motor_n: the motor n
       digitalWrite(4,LOW);
     }
     analogWrite(5,speed_m);
-   }
-   else
-   {
-     if(direction_m==1)
-      {
-        digitalWrite(7,HIGH);  // pin 7 controls M1 rotary direction
-      }
-      else
-      {
-        digitalWrite(7,LOW); 
-      }
-      analogWrite(6,speed_m);
+ }
+ else
+ {
+   if(direction_m==1)
+    {
+      digitalWrite(7,HIGH);  // pin 7 controls M1 rotary direction
     }
+    else
+    {
+      digitalWrite(7,LOW); 
+    }
+    analogWrite(6,speed_m);
+ }
 
  }
+
   
 void loop() 
 {
- Serial.println("Cycle");
- motor_c(0, 0, 255);
- motor_c(1, 0, 100);// M1 rotate in clockwise of 127 component velocity(total as 225)
- delay(1000);        //delay for 1s
- motor_c(1, 1, 100);// M1 rotate in counter-clockwise of 200 component velocity(total as 225)
- delay(1000);      //delay for 5s
+  Serial.println("Cycle");
+
+
+  if(digitalRead(12)==LOW)
+  {
+    Serial.print("Front Switch");
+  }
+
+  if(digitalRead(13)==LOW)
+  {
+    Serial.print("Back Switch");
+  }
+  
+
+ if(1)
+ {
+  // Magnet
+  motor_c(0, 0, 255);
+
+  // Motor
+  motor_c(1, 0, 100);// M1 rotate in clockwise of 127 component velocity(total as 225)
+  delay(1000);        //delay for 1s
+  motor_c(1, 1, 100);// M1 rotate in counter-clockwise of 200 component velocity(total as 225)
+  delay(1000);
+ }
+ else
+ {
+  motor_c(0, 0, 0);
+  motor_c(1, 0, 0);
+ }
+
+ 
 }
