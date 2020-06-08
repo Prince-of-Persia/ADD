@@ -42,8 +42,9 @@ void motor_c(char motor_n,char direction_m,int speed_m ) /* motor_n: the motor n
 void loop() 
 {
  Serial.println("Cycle");
- motor_c(1,0, 100);// M1 rotate in clockwise of 127 component velocity(total as 225)
+ motor_c(0, 0, 255);
+ motor_c(1, 0, 100);// M1 rotate in clockwise of 127 component velocity(total as 225)
  delay(1000);        //delay for 1s
- motor_c(1,1, 100);// M1 rotate in counter-clockwise of 200 component velocity(total as 225)
+ motor_c(1, 1, 100);// M1 rotate in counter-clockwise of 200 component velocity(total as 225)
  delay(1000);      //delay for 5s
 }
