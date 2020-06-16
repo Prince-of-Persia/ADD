@@ -164,9 +164,9 @@ void loop()
      {
        startMillis = 0;
        motor_c(0, 1, 0);
-       delay(500);
+       delay(2000);
        motor_c(1, 0, 0);
-       delay(500);
+       delay(2000);
        seq++;
      }
   }
@@ -179,12 +179,12 @@ void loop()
     
     motor_c(0, 1, 100);
     
-    if (hoist_pos < -100){
+    if (hoist_pos < -800){
        myStepper.step(10);
        hoist_pos = hoist_pos + 10;
     }
     
-    if ((millis()-startMillis) > 1000){
+    if ((millis()-startMillis) > 800){
       startMillis = 0;
       motor_c(0, 1, 0);
       seq++;
@@ -214,18 +214,31 @@ void loop()
     motor_c(1, 0, 255);
     myStepper.step(-10);
     hoist_pos = hoist_pos - 10;
-    if (hoist_pos < -2000){
-      delay(500);
-      seq++;  
+    if (hoist_pos < -2700){
+      delay(2000);
+      seq++;
+    }
+  }
+  
+  // Up
+  if (seq == 10){
+    motor_c(1, 0, 255);
+    
+    if (hoist_pos < -500){
+       myStepper.step(10);
+       hoist_pos = hoist_pos + 10;
+    }
+    else
+    {
+      seq++;
     }
   }
   
   // To drop 2
-  if (seq == 10){
-    motor_c(1, 0, 255);
+  if (seq == 11){
     motor_c(0, 1, 100);
     
-    if (hoist_pos < -1000){
+    if (hoist_pos < -500){
        myStepper.step(10);
        hoist_pos = hoist_pos + 10;
     } 
@@ -233,24 +246,25 @@ void loop()
     if (digitalRead(5) == LOW){
       motor_c(0, 1, 0);
       seq++;
+      delay(1000);
     }
   }
   
   // Lower and drop
-  if (seq == 11){
+  if (seq == 12){
     motor_c(1, 0, 255);
     myStepper.step(-10);
     hoist_pos = hoist_pos - 10;
-    if (hoist_pos < -1200){
-      delay(500);
+    if (hoist_pos < -800){
+      delay(2000);
       motor_c(1, 0, 0);
-      delay(500);
+      delay(1000);
       seq++; 
     } 
   }
   
   // Up Reset
-  if (seq == 12){
+  if (seq == 13){
     myStepper.step(10);
     hoist_pos = hoist_pos + 10;
     if (hoist_pos >= 0){
@@ -258,15 +272,15 @@ void loop()
     }
   }   
   
-  
-  if (seq == 13){
+  // Reset Pos
+  if (seq == 14){
     if (startMillis == 0){
       startMillis = millis();
     }
     
     motor_c(0, 0, 150);
     
-    if (hoist_pos < -100){
+    if (hoist_pos < -10){
        myStepper.step(10);
        hoist_pos = hoist_pos + 10;
     }

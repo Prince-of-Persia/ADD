@@ -1,10 +1,10 @@
 #include <Stepper.h>
 
-const int stepsPerRevolution = 500;  // change this to fit the number of steps per revolution
+const int stepsPerRevolution = 5000;  // change this to fit the number of steps per revolution
 // for your motor
 
 // initialize the stepper library on pins 8 through 11:
-Stepper myStepper(stepsPerRevolution, A5, A3, A4, A2);
+Stepper myStepper(stepsPerRevolution, A5, A4, A3, A2);
 
 void setup() {
   pinMode(A5, OUTPUT);
