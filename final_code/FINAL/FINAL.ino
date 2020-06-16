@@ -6,6 +6,9 @@
 #define crane 4
 #define dcmotor 2
 #define limits A8
+//LEDs
+int ledPin[] = {22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41};
+
 
 #include <Servo.h>
 
@@ -19,7 +22,8 @@ int fsrreading2;
 int fsrreading3;
 int fsrreading4;
 
-void setup() {
+void setup() 
+{
   Serial.begin(9600);
   
   servo.attach(8);
@@ -39,11 +43,17 @@ void setup() {
   
   pinMode(dcmotor, OUTPUT);
   analogWrite(dcmotor, 0);
+  for(int i=0; i<sizeof(ledPin); i++)
+  {
+      pinMode(ledPin[i], OUTPUT);
+  }
+
 }
 void loop() 
 { 
    
-  if (seq == -1){
+  if (seq == -1)
+  {
     delay(3000);
     digitalWrite(crane, LOW);
     delay(500);
@@ -75,8 +85,10 @@ void loop()
   {
     for(angle = 10; angle < 90; angle++)  
     {                                  
-      servo.write(angle);               
-      delay(15);                   
+      servo.write(angle); 
+      digitalWrite(ledPin[0], HIGH);              
+      delay(15); 
+      digitalWrite(ledPin[0], LOW);                  
     }
     seq++;
   }
