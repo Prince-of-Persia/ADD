@@ -39,10 +39,13 @@ void motor_c(char motor_n, char direction_m, int speed_m ) /* motor_n: the motor
 /* direction_m : the motor rotary direction(0 is clockwise and 1 is counter-clockwise).*/
 /* speed_m: to control the motor rotation speed(from 0 to 255 ), the speed_m value is larger, the rotation speed is faster;*/
 {
-  if (((digitalRead(5) == LOW)||(digitalRead(6) == LOW)||(digitalRead(4) == HIGH))&&(motor_n == 0)){
+  if (((digitalRead(5) == LOW)||(digitalRead(4) == HIGH))&&(motor_n == 0)&&(direction_m == 1)){
     speed_m = 0;
   }
-    
+  
+  if (((digitalRead(6) == LOW)||(digitalRead(4) == HIGH))&&(motor_n == 0)&&(direction_m == 0)){
+    speed_m = 0;
+  }  
   
   if (motor_n == 1) {
     if (direction_m == 1) {
@@ -95,6 +98,7 @@ void loop()
 {
   
   Serial.println(seq);
+  Serial.println(hoist_pos);
   
   // Wait at start
   if (seq == 0){
@@ -126,7 +130,7 @@ void loop()
     motor_c(1, 0, 255);
     myStepper.step(-10);
     hoist_pos = hoist_pos - 10;
-    if (hoist_pos < -1000){
+    if (hoist_pos < -1900){
       delay(500);
       seq++;  
     }
@@ -137,7 +141,7 @@ void loop()
     motor_c(1, 0, 255);
     myStepper.step(10);
     hoist_pos = hoist_pos + 10;
-    if (hoist_pos > -600){
+    if (hoist_pos > -1000){
       seq++;  
     }
   }
@@ -151,12 +155,12 @@ void loop()
      motor_c(1, 0, 255);
      motor_c(0, 1, 100);
      
-     if (hoist_pos < -300){
+     if (hoist_pos < -1000){
        myStepper.step(10);
        hoist_pos = hoist_pos + 10;
      }
      
-     if ((millis()-startMillis) > 1000)
+     if ((millis()-startMillis) > 1400)
      {
        startMillis = 0;
        motor_c(0, 1, 0);
