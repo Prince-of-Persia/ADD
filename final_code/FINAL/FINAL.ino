@@ -54,7 +54,8 @@ void loop()
   //Serial.println(fsrreading1);
   fsrreading1 = analogRead(fsr1pin);
   Serial.println(fsrreading1);
-    //fsrreading2 = analogRead(fsr2pin);
+  Serial.println(seq);
+  //fsrreading2 = analogRead(fsr2pin);
   //Serial.println(fsrreading2);
   if (seq == 0) // First FSR (start of CMP)
   {
@@ -109,12 +110,7 @@ void loop()
     fsrreading3 = analogRead(fsr3pin);
     if (fsrreading3 > 100)
     {
-      //delay(10);
-     // fsrreading3 = analogRead(fsr3pin);
-       // if (fsrreading3 > 100) 
-        //{
       seq++;
-       // }
     }
   }
   
@@ -163,18 +159,7 @@ void loop()
     delay(1000);  
     digitalWrite(crane, HIGH);
     seq++; 
-  }
-  
-  if (seq = 10)
-  {
-    int a = 1;
-     
-  }
-  
-  
-  
-  
-  
+  } 
   
   
   
