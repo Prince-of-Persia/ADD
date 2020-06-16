@@ -85,8 +85,10 @@ void loop()
   {
     for(angle = 10; angle < 90; angle++)  
     {                                  
-      servo.write(angle);               
-      delay(15);                   
+      servo.write(angle); 
+      digitalWrite(ledPin[0], HIGH);              
+      delay(15); 
+      digitalWrite(ledPin[0], LOW);                  
     }
     seq++;
   }
