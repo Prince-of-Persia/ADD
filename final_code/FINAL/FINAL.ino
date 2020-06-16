@@ -22,6 +22,8 @@ int fsrreading2;
 int fsrreading3;
 int fsrreading4;
 
+int delayTime = 20;
+
 void setup() 
 {
   Serial.begin(9600);
@@ -87,8 +89,11 @@ void loop()
     {                                  
       servo.write(angle); 
       digitalWrite(ledPin[0], HIGH);              
-      delay(15); 
-      digitalWrite(ledPin[0], LOW);                  
+      delay(delayTime); 
+      digitalWrite(ledPin[0], LOW);   
+    	digitalWrite(ledPin[0], HIGH);              
+      delay(delayTime); 
+      digitalWrite(ledPin[0], LOW);               
     }
     seq++;
   }
@@ -97,6 +102,12 @@ void loop()
   {
     angle = 10;
     servo.write(angle); 
+    digitalWrite(ledPin[1], HIGH);              
+    delay(delayTime); 
+    digitalWrite(ledPin[1], LOW);   
+  	digitalWrite(ledPin[1], HIGH);              
+    delay(delayTime); 
+    digitalWrite(ledPin[1], LOW);
     seq++;
   }
   
@@ -110,8 +121,15 @@ void loop()
         if (fsrreading2 > 100) 
         {
           digitalWrite(crane, LOW);
-          delay(100);
+					digitalWrite(ledPin[2], HIGH);              
+					delay(delayTime); 
+					digitalWrite(ledPin[2], LOW);
+          delay(delayTime);
+          delay(60);
           digitalWrite(crane, HIGH);
+					digitalWrite(ledPin[2], HIGH);              
+					delay(delayTime); 
+					digitalWrite(ledPin[2], LOW);          
           seq++;
         }
     }
