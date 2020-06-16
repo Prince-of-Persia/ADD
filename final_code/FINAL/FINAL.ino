@@ -183,4 +183,58 @@ void loop()
     digitalWrite(crane, HIGH);
     seq++; 
   } 
+
+  if(seq == 10)
+  {
+  	digitalWrite(ledPin[10], HIGH);
+    seq++;
+  }
+
+  if(seq == 11)
+  {
+  	digitalWrite(ledPin[11], HIGH);
+    seq++;
+  }
+  
+  if(seq == 12)
+  {
+  	digitalWrite(ledPin[12], HIGH);
+    seq++;
+  }
+  
+  if(seq == 13)
+  {
+  	digitalWrite(ledPin[13], HIGH);
+    seq++;
+  }
+  
+  if(seq == 14)
+  {
+  	digitalWrite(ledPin[14], HIGH);
+    seq++;
+  }
+  
+  if(seq == 15)
+  {
+  	digitalWrite(ledPin[15], HIGH);
+    seq++;
+  }
+  
+  if(seq == 16)
+  {
+  	digitalWrite(ledPin[16], HIGH);
+    seq++;
+  }
+  
+  if(seq == 17)
+  {
+  	digitalWrite(ledPin[17], HIGH);
+    seq++;
+  }
+  
+  if(seq == 18)
+  {
+  	digitalWrite(ledPin[18], HIGH);
+    seq++;
+  }            
 }
