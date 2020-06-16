@@ -160,7 +160,7 @@ void loop()
        hoist_pos = hoist_pos + 10;
      }
      
-     if ((millis()-startMillis) > 1400)
+     if ((millis()-startMillis) > 1350)
      {
        startMillis = 0;
        motor_c(0, 1, 0);
@@ -179,12 +179,12 @@ void loop()
     
     motor_c(0, 1, 100);
     
-    if (hoist_pos < -800){
+    if (hoist_pos > -800){
        myStepper.step(10);
        hoist_pos = hoist_pos + 10;
     }
     
-    if ((millis()-startMillis) > 800){
+    if ((millis()-startMillis) > 850){
       startMillis = 0;
       motor_c(0, 1, 0);
       seq++;
