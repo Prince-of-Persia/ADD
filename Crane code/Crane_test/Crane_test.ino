@@ -32,7 +32,7 @@ void setup()
   pinMode(13, OUTPUT); // B Dir
   pinMode(8, OUTPUT); // Brake B
   
-  pinMode(7, INPUT_PULLUP);
+  pinMode(2, INPUT);
 }  
 
 void motor_c(char motor_n, char direction_m, int speed_m ) /* motor_n: the motor number to drive(0 stands for M1;1 stands for M2)*/
@@ -98,12 +98,11 @@ void loop()
 {
   
   Serial.println(seq);
-  Serial.println(hoist_pos);
   
   // Wait at start
   if (seq == 0){
     delay(100);
-    if(digitalRead(7) == LOW) {
+    if(digitalRead(2) == LOW) {
       seq++;   
     }    
   }
@@ -120,7 +119,7 @@ void loop()
   // Wait for ball ready
   if (seq == 2){
     delay(100);
-    if(digitalRead(7) == LOW){
+    if(digitalRead(2) == LOW){
       seq++; 
     }    
   }
@@ -160,7 +159,7 @@ void loop()
        hoist_pos = hoist_pos + 10;
      }
      
-     if ((millis()-startMillis) > 1350)
+     if ((millis()-startMillis) > 1200)
      {
        startMillis = 0;
        motor_c(0, 1, 0);
@@ -171,60 +170,39 @@ void loop()
      }
   }
   
-  // Move across above stack
-  if (seq == 6){
-    if (startMillis == 0){
-      startMillis = millis();
-    }
-    
-    motor_c(0, 1, 100);
-    
-    if (hoist_pos > -800){
-       myStepper.step(10);
-       hoist_pos = hoist_pos + 10;
-    }
-    
-    if ((millis()-startMillis) > 850){
-      startMillis = 0;
-      motor_c(0, 1, 0);
-      seq++;
-    }
-  }
-  
-   // Lower to ready pos
-  if (seq == 7){
-    myStepper.step(-10);
-    hoist_pos = hoist_pos - 10;
-    if (hoist_pos < -1000){
-      seq++;  
-    }
-  }
-  
   // Wait for ball to reach t2
-  if (seq == 8){
-    delay(100);
-    if(digitalRead(7) == LOW){
-      seq++;   
+  if (seq == 6){
+    if(digitalRead(2) == LOW){
+      seq++;
     }    
   }
   
+  // Move across above stack
+  if (seq == 7){
+    motor_c(0, 1, 100);
+    delay(750);
+    motor_c(0, 1, 0);
+    seq++;
+  }
   
   // Pick up ball 2
-  if (seq == 9){
+  if (seq == 8){
     motor_c(1, 0, 255);
+    motor_c(0, 1, 0);
     myStepper.step(-10);
     hoist_pos = hoist_pos - 10;
-    if (hoist_pos < -2700){
+    if (hoist_pos < -2300){
       delay(2000);
       seq++;
     }
   }
   
   // Up
-  if (seq == 10){
+  if (seq == 9){
     motor_c(1, 0, 255);
+    motor_c(0, 1, 0);
     
-    if (hoist_pos < -500){
+    if (hoist_pos < -200){
        myStepper.step(10);
        hoist_pos = hoist_pos + 10;
     }
@@ -235,13 +213,9 @@ void loop()
   }
   
   // To drop 2
-  if (seq == 11){
+  if (seq == 10){
+    motor_c(1, 0, 255);
     motor_c(0, 1, 100);
-    
-    if (hoist_pos < -500){
-       myStepper.step(10);
-       hoist_pos = hoist_pos + 10;
-    } 
     
     if (digitalRead(5) == LOW){
       motor_c(0, 1, 0);
@@ -251,45 +225,37 @@ void loop()
   }
   
   // Lower and drop
-  if (seq == 12){
+  if (seq == 11){
     motor_c(1, 0, 255);
+    motor_c(0, 1, 0);
     myStepper.step(-10);
     hoist_pos = hoist_pos - 10;
-    if (hoist_pos < -800){
+    if (hoist_pos < -400){
       delay(2000);
       motor_c(1, 0, 0);
-      delay(1000);
-      seq++; 
+      seq = 12; 
     } 
   }
   
   // Up Reset
-  if (seq == 13){
+  if (seq == 12){
     myStepper.step(10);
     hoist_pos = hoist_pos + 10;
-    if (hoist_pos >= 0){
-      seq++; 
+    if (hoist_pos > -10){
+      seq = 13;
     }
   }   
   
   // Reset Pos
-  if (seq == 14){
-    if (startMillis == 0){
-      startMillis = millis();
-    }
-    
+  if (seq == 13){
+    motor_c(1, 0, 0);
+   
     motor_c(0, 0, 150);
+    delay(1000);
     
-    if (hoist_pos < -10){
-       myStepper.step(10);
-       hoist_pos = hoist_pos + 10;
-    }
+    motor_c(0, 0, 0);
+    seq = 0;
     
-    if ((millis()-startMillis) > 1000){
-      startMillis = 0;
-      motor_c(0, 1, 0);
-      seq = 0;
-    }
   }
   
   // Motor Stoppers
